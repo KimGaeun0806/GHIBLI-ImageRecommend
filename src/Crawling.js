@@ -16,7 +16,7 @@ const Title = styled.p`
   margin-bottom: 50px;
 `;
 
-const Crawling = ({ whatImg, home }) => {
+const Crawling = ({ whatImg, setHome }) => {
   let queryString = '';
   switch (whatImg) {
     case 'phone':
@@ -74,7 +74,10 @@ const Crawling = ({ whatImg, home }) => {
         onClick={() => setDisplayInteger(Math.floor(Math.random() * 99) + 1)}
         style={{ cursor: 'pointer' }}
       />
-      <p style={{ marginTop: '20px', fontSize: '18px', cursor: 'pointer' }}>
+      <p
+        style={{ marginTop: '20px', fontSize: '18px', cursor: 'pointer' }}
+        onClick={() => setHome(true)}
+      >
         back
       </p>
     </Container>

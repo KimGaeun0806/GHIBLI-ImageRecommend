@@ -42,7 +42,7 @@ function App() {
         </Container>
       )}
 
-      {home || <Crawling whatImg={whatImg} home={home} />}
+      {home || <Crawling whatImg={whatImg} setHome={setHome} />}
     </>
   );
 }
