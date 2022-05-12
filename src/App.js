@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import Crawling from './Crawling';
 
-// 색깔별 배경 추천도 넣기
-// 랜덤이미지 / 노트북 배경 / 휴대폰 배경 / 움짤
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
