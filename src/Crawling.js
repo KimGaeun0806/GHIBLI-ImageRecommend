@@ -1,7 +1,16 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+// import dotenv from 'dotenv';
 
 const axios = require('axios');
+// dotenv.config();
+
+console.log(
+  process.env.REACT_APP_ID_KEY.substring(
+    0,
+    process.env.REACT_APP_ID_KEY.length - 1
+  )
+);
 
 const Container = styled.div`
   display: flex;
@@ -37,8 +46,17 @@ const Crawling = ({ whatImg, setHome }) => {
 
   useEffect(() => {
     const getImage = async () => {
-      const ID_KEY = 'swG9o0Rrp7H9pWg88SeY';
-      const SECRET_KEY = 'IZ4ZLojH6R';
+      // const ID_KEY = 'swG9o0Rrp7H9pWg88SeY';
+      // const SECRET_KEY = 'IZ4ZLojH6R';
+
+      const ID_KEY = process.env.REACT_APP_ID_KEY.substring(
+        1,
+        process.env.REACT_APP_ID_KEY.length - 2
+      );
+      const SECRET_KEY = process.env.REACT_APP_SECRET_KEY.substring(
+        1,
+        process.env.REACT_APP_SECRET_KEY.length - 2
+      );
 
       try {
         const response = await axios.get(
